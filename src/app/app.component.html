@@ -1,0 +1,11 @@
+
+<div class="container">
+  <h1>Práctico Angular</h1>
+  <button mat-raised-button color="primary" (click)="toggleProductos()" >{{ mostrarProductos ? 'Ocultar productos' : 'Mostrar productos' }}</button>
+
+  <ul *ngIf="mostrarProductos" class="list-items-container">
+    <li *ngFor="let producto of productos" class="list-item" >{{producto.nombre}} <span>$ {{producto.costo}}</span></li >
+  </ul>  
+</div>
+
+
